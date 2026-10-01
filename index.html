@@ -1,321 +1,234 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apna Ghar Real Estate</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apna Ghar Real Estate | Every family deserves a place to call apna</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+:root{--g:#0d3b2e;--g2:#1f6a52;--gold:#b8891a;--t:#bf5a42;--tint:#d9eee0;--line:#c3dccb;--wa:#1f9d55;--tx:#17302a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:84px;background:#eaf6ee}
+*{box-sizing:border-box}
+body{margin:0;background:#eaf6ee;color:var(--tx);font:400 17px/1.65 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:400;color:var(--g);margin:0 0 .5em;line-height:1.1}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:#eaf6eef2;border-bottom:1px solid var(--line);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--g);font:600 22px "Playfair Display",serif}
+.brand img{width:48px;height:48px;object-fit:contain}
+.menu{display:flex;gap:26px}
+.menu a{text-decoration:none;font-weight:500}
+.cta{display:flex;gap:10px;align-items:center}
+@media(max-width:980px){.menu{display:none}.ph{display:none!important}}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font:700 16px "DM Sans",sans-serif;text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.ph{border-color:var(--g);color:var(--g)}.tc{background:var(--t);color:#fff}.gr{background:var(--g);color:#fff}.wa{background:var(--wa);color:#fff}.ol{border-color:var(--g);color:var(--g)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:44px 0 54px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.eb{color:var(--gold);font-weight:700;letter-spacing:.14em;font-size:14px;margin:0 0 18px}
+.hero h1{font-size:clamp(42px,7.2vw,86px);line-height:1.02}
+.hero h1 em{color:var(--gold)}
+.hero p.l{max-width:46ch;font-size:19px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.arch{position:relative;max-width:480px;margin:0 auto;width:100%}
+.arch img{display:block;width:100%;height:clamp(380px,56vw,560px);object-fit:cover;object-position:78% center;border-radius:999px 999px 28px 28px}
+.glass{position:absolute;right:-6px;top:26%;width:62%;padding:16px 18px;border-radius:20px;background:#ffffffb8;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #fff;box-shadow:0 8px 28px #0d3b2e33}
+.glass small{color:var(--gold);font-weight:700}
+.glass p{margin:2px 0 0;font:400 20px/1.25 "Playfair Display",serif;color:var(--g)}
+.badge{position:absolute;left:-18px;bottom:-14px;width:118px;height:118px;display:block}
+.badge svg{width:100%;height:100%;display:block}
+@media(prefers-reduced-motion:no-preference){.badge .rt{transform-origin:60px 60px;animation:sp 22s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}}
+section{padding:56px 0}
+.tint{background:var(--tint)}
+h2{font-size:clamp(30px,4.6vw,46px)}
+.lead{max-width:56ch;margin:0 0 24px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#eeefef;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pad{padding:20px}
+.pad h3{font-size:22px}
+.top{height:96px;display:flex;align-items:flex-end;padding:12px 18px;color:#fff;font:400 26px "Playfair Display",serif}
+.Villa{background:linear-gradient(135deg,#0d3b2e,#1f6a52)}.Apartment{background:linear-gradient(135deg,#1f6a52,#3c9477)}.Plot{background:linear-gradient(135deg,#b8891a,#d9ae45);color:#2a2000}
+.sp{color:var(--g2);font-weight:700;margin:0 0 4px}
+.note{font-size:14px;color:#52665f;margin:0}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.row .btn{padding:8px 16px;font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{border:1.5px solid var(--g);background:#eeefef;color:var(--g);padding:7px 18px;border-radius:999px;cursor:pointer;font:700 15px "DM Sans",sans-serif}
+.chip[aria-pressed="true"]{background:var(--g);color:#fff}
+.proj{background:var(--g);color:#fff;border-radius:28px;padding:clamp(24px,5vw,50px);display:grid;gap:26px;grid-template-columns:1.2fr 1fr}
+@media(max-width:860px){.proj{grid-template-columns:1fr}}
+.proj h2{color:#fff}.proj h2 em{color:#e3b84a}
+.proj ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.proj li{border:1px solid #ffffff40;border-radius:14px;padding:14px 16px}
+.proj b{display:block;color:#e3b84a}
+.num{font:400 40px "Playfair Display",serif;color:var(--gold);line-height:1}
+form{display:grid;gap:12px}
+label{font-weight:700;font-size:15px}
+input,select,textarea{width:100%;padding:12px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:#eeefef;color:var(--tx)}
+.two{display:grid;gap:30px;grid-template-columns:1fr 1fr}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+footer{background:var(--g);color:#fff;padding:30px 0}
+footer a{margin-right:16px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 4px 16px #0003}
 
-body{
-    background:#f8f8f8;
-    color:#333;
-}
-
-header{
-    background:#0b1f3a;
-    color:white;
-    padding:15px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#d4af37;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-}
-
-.hero{
-    height:80vh;
-    background:linear-gradient(rgba(11,31,58,.75),rgba(11,31,58,.75)),
-    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:52px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:20px;
-    margin-bottom:25px;
-}
-
-.btn{
-    background:#d4af37;
-    color:#0b1f3a;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-section{
-    padding:60px 8%;
-}
-
-.section-title{
-    text-align:center;
-    color:#0b1f3a;
-    margin-bottom:40px;
-    font-size:34px;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-    text-align:center;
-}
-
-.card h3{
-    color:#0b1f3a;
-    margin-bottom:10px;
-}
-
-.properties{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.property{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-.property img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.property-content{
-    padding:20px;
-}
-
-.price{
-    color:#d4af37;
-    font-size:22px;
-    font-weight:bold;
-}
-
-.about{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-}
-
-.contact-form{
-    max-width:700px;
-    margin:auto;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
-
-.contact-form button{
-    background:#0b1f3a;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    cursor:pointer;
-}
-
-footer{
-    background:#0b1f3a;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-.social a{
-    color:#d4af37;
-    text-decoration:none;
-    margin:0 10px;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 20px;
-    border-radius:50px;
-    font-weight:bold;
-}
-</style>
+.mq{background:var(--g);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-weight:500}
+.mq div{display:inline-block;animation:mq 45s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mq div{animation:none}}
+.srch{display:flex;gap:10px;flex-wrap:wrap;background:var(--tint);border:1px solid var(--line);border-radius:18px;padding:12px;margin-top:24px}
+.srch select{flex:1;min-width:130px}
+.st{display:inline-block;background:#ffffff33;border-radius:999px;padding:2px 12px;font:700 13px "DM Sans",sans-serif;margin-left:auto}
+.top{align-items:flex-start;justify-content:space-between;flex-direction:column}
+.price{font:600 26px "Playfair Display",serif;color:var(--g);margin:8px 0 0}
+.spec{color:#52665f;font-size:15px;margin:0}
+.quote{border-left:4px solid var(--gold);padding:6px 0 6px 18px;margin:0 0 26px;font:400 22px/1.4 "Playfair Display",serif;color:var(--g);max-width:34ch}
+.who{display:flex;gap:12px;align-items:center;margin-top:14px;font:500 16px "DM Sans",sans-serif}
+.av{width:44px;height:44px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:700}
+.crow{margin:0 0 12px}.crow b{display:block;font-size:14px;color:var(--g2)}
+.why2{display:grid;gap:30px;grid-template-columns:1fr 1.4fr}
+@media(max-width:860px){.why2{grid-template-columns:1fr}}
+.pl{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.pl{grid-template-columns:1fr}}
+.pl .num{font-size:30px}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.Flat,.House,.Plot,.Villa{background:linear-gradient(135deg,#0d3b2e,#1f6a52);color:#fff}</style>
 </head>
-
 <body>
+<header><div class="w"><div class="nav">
+ <a class="brand" href="#"><img src="logo.jpg" alt="Apna Ghar Real Estate logo"><span>Apna Ghar</span></a>
+ <nav class="menu" aria-label="Main"><a href="#properties">Properties</a><a href="#project">Project</a><a href="#services">Services</a><a href="#why">Why us</a><a href="#contact">Contact</a></nav>
+ <div class="cta"><a class="btn ph" href="tel:+918763317545">+91 87633 17545</a><a class="btn tc" href="#contact">Enquire now</a></div>
+</div></div></header>
 
-<header>
-    <div class="logo">APNA GHAR</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#properties">Properties</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div>
-        <h1>Your Dream Home Starts Here</h1>
-        <p>Buy, Sell & Rent Properties with Confidence</p>
-        <a href="#contact" class="btn">Contact Us</a>
-    </div>
-</section>
-
-<section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="about">
-        <p>
-            Apna Ghar Real Estate helps families and investors find the right
-            property. We provide professional assistance for buying, selling,
-            renting and real estate consultation with a focus on trust,
-            transparency and customer satisfaction.
-        </p>
-    </div>
-</section>
-
-<section id="services">
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="services">
-        <div class="card">
-            <h3>Buy Property</h3>
-            <p>Find your dream apartment, house or commercial space.</p>
-        </div>
-
-        <div class="card">
-            <h3>Sell Property</h3>
-            <p>Get the best value with professional marketing support.</p>
-        </div>
-
-        <div class="card">
-            <h3>Rent Property</h3>
-            <p>Residential and commercial rental solutions.</p>
-        </div>
-    </div>
-</section>
-
-<section id="properties">
-    <h2 class="section-title">Featured Properties</h2>
-
-    <div class="properties">
-
-        <div class="property">
-            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200" alt="">
-            <div class="property-content">
-                <h3>Luxury Villa</h3>
-                <p>New Town, Kolkata</p>
-                <p class="price">₹1.25 Cr</p>
-            </div>
-        </div>
-
-        <div class="property">
-            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200" alt="">
-            <div class="property-content">
-                <h3>Modern Apartment</h3>
-                <p>Dholera</p>
-                <p class="price">₹75 Lakh</p>
-            </div>
-        </div>
-
-        <div class="property">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200" alt="">
-            <div class="property-content">
-                <h3>Family Home</h3>
-                <p>Delhi</p>
-                <p class="price">₹95 Lakh</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-
-    <div class="contact-form">
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="tel" placeholder="Phone Number">
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button type="submit">Send Inquiry</button>
-        </form>
-
-        <br>
-
-        <p><strong>Owner:</strong> Dipesh Kumar Nayak</p>
-        <p><strong>Email:</strong> apnagharrealestate26@gmail.com</p>
-        <p><strong>WhatsApp:</strong> 08763317545</p>
-        <p>
-  <a href="tel:+918763317545"
-     style="background:#d4af37;color:#0b1f3a;padding:12px 20px;
-     text-decoration:none;border-radius:5px;font-weight:bold;display:inline-block;">
-     📞 Call Now
+<main>
+<div class="w hero">
+ <div>
+  <p class="eb">PLOTS · VILLAS · FLATS · HOUSES · RENTALS</p>
+  <h1>Every family deserves a place to call <em>apna.</em></h1>
+  <p class="l">We help families find their perfect home in India's most promising city developments, making modern living affordable, sustainable and accessible for everyone.</p>
+  <div class="btns"><a class="btn gr" href="#properties">Explore properties</a><a class="btn wa" href="https://wa.me/918763317545?text=Hello%20Apna%20Ghar%2C%20I%20want%20to%20know%20about%20properties." target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+  <div class="srch">
+   <select id="hm" aria-label="Buy or rent"><option value="All">All</option><option>Buy</option><option>Rent</option></select>
+   <select id="ht" aria-label="Property type"><option value="All">Any type</option><option>Flat</option><option>House</option><option>Villa</option><option>Plot</option></select>
+   <button class="btn tc" id="hgo" type="button">Search homes</button>
+  </div>
+ </div>
+<div class="arch">
+  <img src="banner.jpg" alt="A family looking at a modern villa and apartments at sunset">
+  <a class="badge" href="https://wa.me/918763317545?text=Hello%20Apna%20Ghar%2C%20I%20want%20to%20book%20a%20site%20visit." target="_blank" rel="noopener" aria-label="Book a site visit today">
+   <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="#bf5a42"/>
+    <g class="rt"><path id="c" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0" fill="none"/>
+    <text font-size="11" font-weight="700" letter-spacing="2.2" fill="#fff"><textPath href="#c">BOOK A SITE VISIT · TODAY · CALL ·</textPath></text></g>
+    <path d="M48 72 L72 48 M54 48 H72 V66" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
-</p>
+ </div>
+</div>
+<div class="mq" aria-hidden="true"><div>Affordable living  ·  Solar-powered homes  ·  Metro connectivity  ·  Green parks  ·  Transparent pricing  ·  Guided site visits  ·  Home loan support  ·  Affordable living  ·  Solar-powered homes  ·  Metro connectivity  ·  Green parks  ·  Transparent pricing  ·  Guided site visits  ·  Home loan support  ·  </div></div>
 
-        <div class="social" style="margin-top:20px;">
-            <a href="#">Facebook: Apna Ghar Real Estate</a>
-            <a href="#">Instagram: @apnagharrealestate26</a>
-        </div>
-    </div>
-</section>
+<section id="properties" class="tint"><div class="w">
+ <h2>Homes, plots and rentals, handpicked.</h2>
+ <div class="fl"><div class="chips" id="chips" role="group" aria-label="Buy or rent"></div>
+ <select id="tp" aria-label="Property type" style="width:auto;margin-bottom:22px"><option value="All">All types</option><option>Flat</option><option>House</option><option>Villa</option><option>Plot</option></select></div>
+ <div class="grid" id="list"></div>
+ <p class="note" id="none" hidden>No matches yet. Message us and we will find one for you.</p>
+</div></section>
 
-<footer>
-    <p>© 2026 Apna Ghar Real Estate. All Rights Reserved.</p>
-</footer>
+<section id="project"><div class="w"><div class="proj">
+ <div>
+  <p class="eb" style="color:#e3b84a">FEATURED PROJECT · SMART HOUSING</p>
+  <h2>Futuristic living, designed for tomorrow.</h2>
+  <p>Experience futuristic living with solar-powered homes, wide roads, green parks and metro connectivity, all designed for a smarter tomorrow.</p>
+  <a class="btn tc" href="https://wa.me/918763317545?text=Hello%20Apna%20Ghar%2C%20I%20want%20a%20virtual%20tour%20of%20the%20Smart%20Housing%20Project." target="_blank" rel="noopener">Request a virtual tour</a>
+ </div>
+ <ul>
+  <li><b>01 Solar-powered homes</b>Rooftop solar on every unit for lower bills and a cleaner tomorrow.</li>
+  <li><b>02 Wide roads</b>Planned 40 to 60 ft internal roads with walkways and street lighting.</li>
+  <li><b>03 Green parks</b>Landscaped parks, jogging tracks and play zones within the layout.</li>
+  <li><b>04 Metro connectivity</b>Minutes from the metro corridor for an easy city commute.</li>
+ </ul>
+</div></div></section>
 
-<a class="whatsapp" href="https://wa.me/918763317545" target="_blank">
-WhatsApp Us
-</a>
+<section id="services" class="tint"><div class="w">
+ <h2>Everything between hello and house keys.</h2>
+ <p class="lead">From the first site visit to the final registry, one trusted team guides you through every step.</p>
+ <div class="grid">
+  <div class="card pad"><h3>Residential plots and villas</h3><p>Clear-title plots and ready villas in well-planned, gated layouts.</p></div>
+  <div class="card pad"><h3>Smart investment opportunities</h3><p>Early access to upcoming housing projects with strong growth potential.</p></div>
+  <div class="card pad"><h3>Home loans and documentation</h3><p>Bank tie-ups, loan paperwork and legal verification handled for you.</p></div>
+  <div class="card pad"><h3>Guided site visits and virtual tours</h3><p>Walk the site with us, or tour from home over a live video call.</p></div>
+ </div>
+ <div class="btns"><a class="btn gr" href="https://wa.me/918763317545?text=Hello%20Apna%20Ghar%2C%20I%20want%20to%20book%20a%20site%20visit." target="_blank" rel="noopener">Book a visit</a></div>
+</div></section>
 
+<section id="why"><div class="w why2">
+ <div>
+  <h2>Built on trust, not tactics.</h2>
+  <p class="quote">My mission is simple: make modern living affordable, sustainable and accessible for every family.</p>
+  <div class="who"><span class="av">DK</span><span><b>Dipesh Kumar Nayak</b><br>Founder, Apna Ghar</span></div>
+ </div>
+ <div class="pl">
+  <div><p class="num">01</p><h3>Trusted real estate professionals</h3><p>Local experts who know every lane, layout and landmark, and put your family first.</p></div>
+  <div><p class="num">02</p><h3>Transparent pricing and legal support</h3><p>No hidden charges. Every document verified, every rupee accounted for.</p></div>
+  <div><p class="num">03</p><h3>Personalised guidance</h3><p>First home, upgrade or investment: advice shaped around your budget and goals.</p></div>
+  <div><p class="num">04</p><h3>Quality and satisfaction</h3><p>We stay with you long after the keys are handed over.</p></div>
+ </div>
+</div></section>
+
+<section id="contact" class="tint"><div class="w two">
+ <div>
+  <h2>Let's find your apna ghar.</h2>
+  <p class="crow"><b>WhatsApp</b><a href="https://wa.me/918763317545" target="_blank" rel="noopener">+91 87633 17545</a></p>
+  <p class="crow"><b>Call</b><a href="tel:+918763317545">+91 87633 17545</a></p>
+  <p class="crow"><b>Email</b><a href="mailto:apnagharrealestate26@gmail.com">apnagharrealestate26@gmail.com</a></p>
+  <p class="crow"><b>Facebook</b><a href="https://www.facebook.com/profile.php?id=61594946130710" target="_blank" rel="noopener">Apna Ghar Realestate</a></p>
+  <p class="crow"><b>Instagram</b><a href="https://www.instagram.com/apnagharrealestate26" target="_blank" rel="noopener">@apnagharrealestate26</a></p>
+ </div>
+ <form id="f">
+  <h3>Tell us about your dream home</h3>
+  <div><label for="n">Your name *</label><input id="n" required autocomplete="name"></div>
+  <div><label for="p">Phone / WhatsApp *</label><input id="p" type="tel" required autocomplete="tel"></div>
+  <div><label for="e">Email (optional)</label><input id="e" type="email" autocomplete="email"></div>
+  <div><label for="t">I am</label><select id="t"><option>Buying a property</option><option>Renting a property</option><option>Selling a property</option><option>Investing</option><option>Looking for home loan help</option></select></div>
+  <div><label for="m">What are you looking for? (budget, location, BHK)</label><textarea id="m" rows="3"></textarea></div>
+  <button class="btn tc" type="submit">Send enquiry</button>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="w"><p style="margin:0">© 2026 Apna Ghar Real Estate · Dipesh Kumar Nayak · +91 87633 17545</p></div></footer>
+<a class="btn wa fab" href="https://wa.me/918763317545" target="_blank" rel="noopener" aria-label="Chat with Dipesh">Chat with Dipesh</a>
+
+<script>
+var PROPS=[
+{t:"Villa",k:"Buy",n:"Luxury Villa",l:"New Town, Kolkata",s:"Contact us for details"},
+{t:"Flat",k:"Buy",n:"Modern Apartment",l:"Rajarhat, Kolkata",s:"Contact us for details"},
+{t:"House",k:"Buy",n:"Family Home",l:"New Town Action Area",s:"Contact us for details"},
+{t:"Plot",k:"Buy",n:"Residential Plot, Dholera Smart City",l:"Dholera Smart City",s:"100 to 500 sq. yards"}
+];
+var mode="All",typ="All",chips=document.getElementById("chips"),list=document.getElementById("list"),tp=document.getElementById("tp");
+function wa(m){return "https://wa.me/918763317545?text="+encodeURIComponent(m)}
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt)e.textContent=txt;return e}
+function draw(){
+ chips.innerHTML="";list.innerHTML="";tp.value=typ;
+ ["All","Buy","Rent"].forEach(function(x){var b=el("button","chip",x);b.type="button";b.setAttribute("aria-pressed",x===mode);b.onclick=function(){mode=x;draw()};chips.appendChild(b)});
+ var r=PROPS.filter(function(x){return (mode==="All"||x.k===mode)&&(typ==="All"||x.t===typ)});
+ document.getElementById("none").hidden=r.length>0;
+ r.forEach(function(x){
+  var c=el("div","card"),top=el("div","top "+x.t),pad=el("div","pad");
+  top.appendChild(el("span","st",x.k==="Rent"?"For rent":"For sale"));top.appendChild(el("span","",x.t));
+  pad.appendChild(el("h3","",x.n));pad.appendChild(el("p","sp",x.l));pad.appendChild(el("p","spec",x.s));
+  var row=el("div","row"),a=el("a","btn wa","Enquire on WhatsApp");
+  a.href=wa("Hello Apna Ghar, I am interested in: "+x.n+", "+x.l+".");a.target="_blank";a.rel="noopener";
+  row.appendChild(a);pad.appendChild(row);c.appendChild(top);c.appendChild(pad);list.appendChild(c)});
+}
+tp.onchange=function(){typ=tp.value;draw()};
+document.getElementById("hgo").onclick=function(){mode=document.getElementById("hm").value;typ=document.getElementById("ht").value;draw();document.getElementById("properties").scrollIntoView()};
+draw();
+document.getElementById("f").onsubmit=function(e){e.preventDefault();
+ var g=function(i){return document.getElementById(i).value.trim()};
+ window.open(wa("New enquiry from website\nName: "+g("n")+"\nPhone: "+g("p")+"\nEmail: "+(g("e")||"-")+"\nI am: "+g("t")+"\nMessage: "+(g("m")||"-")),"_blank")};
+</script>
 </body>
 </html>
-```
