@@ -1,17 +1,315 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Apna Ghar Real Estate</title>
-</head>
-<body>
-    <h1>Apna Ghar Real Estate</h1>
-    <p>Welcome to Apna Ghar Real Estate.</p>
 
-    <h2>Contact Us</h2>
-    <p>Dipesh Kumar Nayak</p>
-    <p>Email: apnagharrealestate26@gmail.com</p>
-    <p>WhatsApp: 08763317545</p>
-    <p>Facebook: Apna Ghar Real Estate</p>
-    <p>Instagram: @apnagharrealestate26</p>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apna Ghar Real Estate</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+}
+
+header{
+    background:#0b1f3a;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#d4af37;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    height:80vh;
+    background:linear-gradient(rgba(11,31,58,.75),rgba(11,31,58,.75)),
+    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#d4af37;
+    color:#0b1f3a;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:#0b1f3a;
+    margin-bottom:40px;
+    font-size:34px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.card h3{
+    color:#0b1f3a;
+    margin-bottom:10px;
+}
+
+.properties{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.property{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.property img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.property-content{
+    padding:20px;
+}
+
+.price{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact-form button{
+    background:#0b1f3a;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+}
+
+footer{
+    background:#0b1f3a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.social a{
+    color:#d4af37;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">APNA GHAR</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#properties">Properties</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Your Dream Home Starts Here</h1>
+        <p>Buy, Sell & Rent Properties with Confidence</p>
+        <a href="#contact" class="btn">Contact Us</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+        <p>
+            Apna Ghar Real Estate helps families and investors find the right
+            property. We provide professional assistance for buying, selling,
+            renting and real estate consultation with a focus on trust,
+            transparency and customer satisfaction.
+        </p>
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Buy Property</h3>
+            <p>Find your dream apartment, house or commercial space.</p>
+        </div>
+
+        <div class="card">
+            <h3>Sell Property</h3>
+            <p>Get the best value with professional marketing support.</p>
+        </div>
+
+        <div class="card">
+            <h3>Rent Property</h3>
+            <p>Residential and commercial rental solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="properties">
+    <h2 class="section-title">Featured Properties</h2>
+
+    <div class="properties">
+
+        <div class="property">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200" alt="">
+            <div class="property-content">
+                <h3>Luxury Villa</h3>
+                <p>New Town, Kolkata</p>
+                <p class="price">₹1.25 Cr</p>
+            </div>
+        </div>
+
+        <div class="property">
+            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200" alt="">
+            <div class="property-content">
+                <h3>Modern Apartment</h3>
+                <p>Rajarhat, Kolkata</p>
+                <p class="price">₹75 Lakh</p>
+            </div>
+        </div>
+
+        <div class="property">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200" alt="">
+            <div class="property-content">
+                <h3>Family Home</h3>
+                <p>New Town Action Area</p>
+                <p class="price">₹95 Lakh</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-form">
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <input type="tel" placeholder="Phone Number">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Inquiry</button>
+        </form>
+
+        <br>
+
+        <p><strong>Owner:</strong> Dipesh Kumar Nayak</p>
+        <p><strong>Email:</strong> apnagharrealestate26@gmail.com</p>
+        <p><strong>WhatsApp:</strong> 08763317545</p>
+
+        <div class="social" style="margin-top:20px;">
+            <a href="#">Facebook: Apna Ghar Real Estate</a>
+            <a href="#">Instagram: @apnagharrealestate26</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Apna Ghar Real Estate. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918763317545" target="_blank">
+WhatsApp Us
+</a>
+
 </body>
 </html>
+```
